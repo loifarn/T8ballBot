@@ -17,7 +17,7 @@ public class Logic extends TimerTask{
     };
     private ArrayList<String> replyLog = new ArrayList<>();
     private List<String> eightBall = Arrays.asList(list);
-    private String triggerPhrase = "@TOracleBot #8ball";
+    private String triggerPhrase = "@T8ballBot #8ball";
     private String logPath;
     private String consumerKey;
     private String consumerSecret;
