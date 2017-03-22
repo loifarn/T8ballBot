@@ -27,6 +27,8 @@ public class Logic extends TimerTask{
     private boolean doIhaveNewTweet;
 
     public Logic() {
+        initialize();
+        
         cb = new ConfigurationBuilder();
         cb.setOAuthConsumerKey(consumerKey);
         cb.setOAuthConsumerSecret(consumerSecret);
@@ -35,7 +37,6 @@ public class Logic extends TimerTask{
         tf = new TwitterFactory(cb.build());
         twitter = tf.getInstance();
 
-        initialize();
         logRead(logPath, replyLog);
         askTheBall(twitter);
     }
@@ -53,23 +54,18 @@ public class Logic extends TimerTask{
             while ((line = br.readLine()) != null) {
                 if (counter == 1) {
                     logPath = line.substring(10);
-                    System.out.println("LP = "+logPath);
                 }
                 if (counter == 2) {
                     consumerKey = line.substring(14);
-                    System.out.println("CK = "+consumerKey);
                 }
                 if (counter == 3) {
                     consumerSecret = line.substring(17);
-                    System.out.println("CS = "+consumerSecret);
                 }
                 if (counter == 4) {
                     accessToken = line.substring(14);
-                    System.out.println("AT = "+accessToken);
                 }
                 if (counter == 5) {
                     accessTokenSecret = line.substring(20);
-                    System.out.println("ATS = "+accessTokenSecret);
                 }
                 counter++;
             }
