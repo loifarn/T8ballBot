@@ -1,0 +1,6 @@
+##CONFIG FILE##
+logPath = /path/to/log.txt
+ConsumerKey = "Your Consumer Key"
+ConsumerSecret = "Your Consumer Secret"
+AccessToken = "Your Access Token"
+AccessTokenSecret = "Your Access Token Secret"

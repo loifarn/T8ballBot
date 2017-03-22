@@ -1,0 +1,2 @@
+##This is your Logfile. ##
+##Do not edit. Keep it saved. Bot breaks if you don't keep a reply log."##
